@@ -7,11 +7,13 @@ import Grid from '@mui/material/Grid';
 // import Container from '@mui/material/Container';
 // import Item from '@mui/material/Item';
 
+import Header from './Header.js';
+
 function Sheet(props) {
   return (
-    <Grid item xs={3} className="sheet">
+    <div className="sheet">
       {props.value}
-    </Grid>
+    </div>
   );
 }
 
@@ -28,32 +30,24 @@ class Board extends React.Component {
 
   render() {
     return (
-      <Grid container maxWidth="sm" spacing={2}>
-        {/* <Grid container spacing={1}> */}
-          {this.renderSheet(0)}
-          {this.renderSheet(1)}
-          {this.renderSheet(2)}
-          {this.renderSheet(3)}
-        {/* </Grid> */}
-        {/* <Grid container spacing={1}> */}
-          {this.renderSheet(4)}
-          {this.renderSheet(5)}
-          {this.renderSheet(6)}
-          {this.renderSheet(7)}
-        {/* </Grid> */}
-        {/* // <Grid container spacing={1}> */}
-          {this.renderSheet(8)}
-          {this.renderSheet(9)}
-          {this.renderSheet(10)}
-          {this.renderSheet(11)}
-        {/* </Grid> */}
-        {/* // <Grid container spacing={1}> */}
-          {this.renderSheet(12)}
-          {this.renderSheet(13)}
-          {this.renderSheet(14)}
-          {this.renderSheet(15)}
-        {/* // </Grid> */}
-      </Grid>
+      <div>
+        {this.renderSheet(0)}
+        {this.renderSheet(1)}
+        {this.renderSheet(2)}
+        {this.renderSheet(3)}
+        {this.renderSheet(4)}
+        {this.renderSheet(5)}
+        {this.renderSheet(6)}
+        {this.renderSheet(7)}
+        {this.renderSheet(8)}
+        {this.renderSheet(9)}
+        {this.renderSheet(10)}
+        {this.renderSheet(11)}
+        {this.renderSheet(12)}
+        {this.renderSheet(13)}
+        {this.renderSheet(14)}
+        {this.renderSheet(15)}
+      </div>
     );
   }
 }
@@ -105,13 +99,25 @@ class Classroom extends React.Component {
     const shuffle = '席替え';
     return (
       <div className="classroom">
+        <Header />
         {/* <div className="blackbord">
           <img src={`${process.env.PUBLIC_URL}/school_sensei_kokuban_woman.png`} alt="blackbord"/>
         </div> */}
         <div className="classroom-board">
-          <Board 
-            sheets={current.sheets}
-          />
+          <Grid
+            container
+            alignItems="center"
+            justify="center"
+            spacing={0}
+            collumns={4}
+          >
+            <Grid item xs={6}>
+              <Board 
+                sheets={current.sheets}
+              />
+            </Grid>
+          </Grid>
+          
           <Button 
             onClick={() => this.handleClick()}
             color="primary"

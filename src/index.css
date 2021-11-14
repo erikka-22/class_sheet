@@ -23,13 +23,15 @@ ol, ul {
   float: left; 
   font-size: 24px;
   font-weight: bold;
-  /* line-height: 34px;
-  height: 34px; */
-  margin-right: -1px;
+  
+  height: 7em;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: -1px;
-  /* padding: 0; */
+  padding: 0;
+
   text-align: center;
-  /* width: 200px; */
+  width: 7em;
 }
 
 .square:focus {
@@ -41,15 +43,27 @@ ol, ul {
 }
 
 .classroom {
-  display: flex;
-  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blackbord {
-  display: flex;
+  /* display: flex; */
+}
+
+.classroom-board {
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 10em; */
 }
 
 .classroom-info {
   margin-left: 20px;
 }
+
+/* .classArea {
+  margin-left: auto;
+  margin-right: auto;
+} */
 
