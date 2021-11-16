@@ -6,7 +6,6 @@ import Classroom from './App'
 // ========================================
 
 ReactDOM.render(
-  
   <Classroom />,
   document.getElementById('root')
 );

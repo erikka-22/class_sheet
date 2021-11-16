@@ -4,10 +4,9 @@ import Data from './data/person.json';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-// import Container from '@mui/material/Container';
-// import Item from '@mui/material/Item';
 
-import Header from './Header.js';
+import GenericTemplate from "./components/templates/GenericTemplate";
+// import Header from './Header.js';
 
 function Sheet(props) {
   return (
@@ -99,33 +98,31 @@ class Classroom extends React.Component {
     const shuffle = '席替え';
     return (
       <div className="classroom">
-        <Header />
-        {/* <div className="blackbord">
-          <img src={`${process.env.PUBLIC_URL}/school_sensei_kokuban_woman.png`} alt="blackbord"/>
-        </div> */}
-        <div className="classroom-board">
-          <Grid
-            container
-            alignItems="center"
-            justify="center"
-            spacing={0}
-            collumns={4}
-          >
-            <Grid item xs={6}>
-              <Board 
-                sheets={current.sheets}
-              />
+        <GenericTemplate title="Who is in your side?">
+          <div className="classroom-board">
+            <Grid
+              container
+              alignItems="center"
+              justify="center"
+              spacing={0}
+              collumns={4}
+            >
+              <Grid item xs={6}>
+                <Board 
+                  sheets={current.sheets}
+                />
+              </Grid>
             </Grid>
-          </Grid>
-          
-          <Button 
-            onClick={() => this.handleClick()}
-            color="primary"
-            variant="contained"
-          >
-            {shuffle}
-          </Button>
-        </div>
+            
+            <Button 
+              onClick={() => this.handleClick()}
+              color="primary"
+              variant="contained"
+            >
+              {shuffle}
+            </Button>
+          </div>
+        </GenericTemplate>
         {/* <div>{status}</div> */}
       </div>
     );
