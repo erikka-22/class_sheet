@@ -48,7 +48,54 @@ const theme = createMuiTheme({
   },
 });
 
-const 
+const CustomToolbar = styled(Toolbar) ({
+  paddingRight: 24,
+})
+
+const ToolbarIcon = styled('div') ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  padding: "0 8px",
+  ...theme.mixins.toolbar,
+})
+
+const CustomAppbar = styled(Appbar) ({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(["width", "margin"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+})
+
+const AppbarShift = styled(Appbar) ({
+  marginLeft: drawerWidth,
+  width: `calc(100% - ${drawerWidth}px)`,
+  transition: theme.transitions.create(["width", "margin"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.enteringScreen,
+  }),
+})
+
+const MenuButton = styled(IconButton) ({
+  paddingRight: 24,
+})
+
+const CustomToolbar = styled(Toolbar) ({
+  paddingRight: 24,
+})
+
+const CustomToolbar = styled(Toolbar) ({
+  paddingRight: 24,
+})
+
+const CustomToolbar = styled(Toolbar) ({
+  paddingRight: 24,
+})
+
+const CustomToolbar = styled(Toolbar) ({
+  paddingRight: 24,
+})
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
